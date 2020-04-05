@@ -1,0 +1,79 @@
+#!/bin/bash
+
+##  rt/remove_trash.sh 
+##  1.This bash is designed to replace rm.
+##  2.It can avoid deleting files with commands rm by mistake
+##  3.You can continue to use rm to delete files, and it will move the target file or directory to a trash directory instead of directly delete. 
+##  4.Besides, you can set the time to automatically empty the trash dirctory.
+
+## Author: WeigangZheng, zwg2016@yeah.net 
+## Date: 2020-04-05
+
+##******First step******
+## vim ~/.bashrc
+## alias rm="~/rt" 
+##******Second step******
+## crontab -e
+## 0 0 * * 0 rm -rf /zhengweigang/zwg.trash/*
+#########################
+
+alias rm="~/rt" # Replace rm command with rt command, the "~/rt" should be set to your global path. It should be written in ~/.bashrc
+Trashdir="/zhengweigang/zwg.trash" # Set to your trash dirctory 
+Progname="rm"
+
+## Check the order is correct
+if [ ! -d $Trashdir ]; then
+    echo -e "Warning: $Trashdir not exist;\nTry to creat $Trashdir"
+    mkdir $Trashdir || exit ;
+fi
+if [ $# -lt 1 ]; then
+    echo "Error: no target for $Progname"
+    echo "Usage: $Progname myfile mydirectory"
+    exit  
+fi
+AA="del"
+BB=`basename $1`
+CC=1
+DD=1
+onoff="No"
+Time=`date | sed 's/ \+/-/g'`
+
+## move the target files or directories to a trash directory or permanently delete them
+for i in $*; do
+    if [ $CC -lt 2 ]
+    then  
+	if [ "$AA" == "$BB" ]
+        then
+            DD=$[DD+1]
+            read -t 10 -p "请确认是否永久删除文件或文件夹? Y/N:" onoff
+            #read -t 10 -p "Are you sure to permanently delete files or directories? Y/N:" onoff
+            echo -e "\n"
+            if [ "$onoff" == "Y" ] || ( echo $onoff | grep -qi "Yes" )
+            then
+	        unalias rm
+            fi
+        else
+	    TrashFileName=`basename $i`
+	    mv $i  $Trashdir/$TrashFileName-$Time	
+        fi
+    else
+        if [ $DD -ge 2 ] &&  ( [ "$onoff" == "Y" ] || ( echo $onoff | grep -qi "Yes" )  )
+        then
+            rm -rif $i
+        else
+	    TrashFileName=`basename $i`
+	    mv $i  $Trashdir/$TrashFileName-$Time	
+        fi
+    fi
+    CC=$[CC+1]
+done
+if [ $DD -ge 2 ] &&  ( [ "$onoff" == "Y" ] || ( echo $onoff | grep -qi "Yes" )  )
+then
+    alias rm="~/rt"
+    echo -e "警告: 已经直接将文件或文件夹删除 \n"
+    #echo -e "Warning: have permanently deleted the target file or directory \n"
+else
+    echo -e "完成: 将文件或文件夹移至垃圾回收站 $Trashdir \n"
+    #echo -e "Finished: have moved the target file or directory to $Trashdir \n"
+fi
+

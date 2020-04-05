@@ -4,7 +4,7 @@
 ##  1.This bash is designed to replace rm.
 ##  2.It can avoid deleting files with commands rm by mistake
 ##  3.You can continue to use rm to delete files, and it will move the target file or directory to a trash directory instead of directly delete. 
-##  4.Besides, you can set the time to automatically empty the trash dirctory.
+##  4.Besides, you can set the time to automatically empty the trash directory.
 
 ## Author: WeigangZheng, zwg2016@yeah.net 
 ## Date: 2020-04-05
@@ -18,7 +18,7 @@
 #########################
 
 alias rm="~/rt" # Replace rm command with rt command, the "~/rt" should be set to your global path. It should be written in ~/.bashrc
-Trashdir="/zhengweigang/zwg.trash" # Set to your trash dirctory 
+Trashdir="/zhengweigang/zwg.trash" # Set to your trash directory 
 Progname="rm"
 
 ## Check the order is correct

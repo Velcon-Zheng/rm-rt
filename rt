@@ -4,7 +4,7 @@
 ##  1.This bash is designed to replace rm.
 ##  2.It can avoid deleting files with commands rm by mistake
 ##  3.You can continue to use rm to delete files, and it will move the target file or directory to a trash directory instead of directly delete. 
-##  4.Besides, you can set the time to automatically empty the trash dirctory.
+##  4.Besides, you can set the time to automatically empty the trash directory.
 
 ## Author: WeigangZheng, zwg2016@yeah.net 
 ## Date: 2020-04-05
@@ -45,7 +45,7 @@ for i in $*; do
 	if [ "$AA" == "$BB" ]
         then
             DD=$[DD+1]
-            #read -t 10 -p "***请确认是否永久删除文件或文件夹(Are you sure to permanently delete files or folders? Y/N)***:" onoff
+            #read -t 10 -p "***请确认是否永久删除文件或文件夹(Are you sure to permanently delete files or directories? Y/N)***:" onoff
             read -t 10 -p "Are you sure to permanently delete files or directories? Y/N:" onoff
             echo -e "\n"
             if [ "$onoff" == "Y" ] || ( echo $onoff | grep -qi "Yes" )

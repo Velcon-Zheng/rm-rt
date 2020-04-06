@@ -40,6 +40,10 @@ Warning: have permanently deleted the target file or directory
 Finished: have moved the target file or directory to '$trash directory'
 ```
 #
-## 4. Getting Help
+## 4. Thanks
+#### &emsp;Thanks to Dr. Fan, Dr. Liu and others for their teaching knowledge of programming.
+#### &emsp;Thanks to the network for providing many learning resources.
+#
+## 5. Getting Help
 #### &emsp;Please use the GitHub's Issues page if you have questions. You may also directly contact WeigangZheng at zwg2016@yeah.net 
 #### &emsp;Date: 2020-04-05

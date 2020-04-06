@@ -2,7 +2,7 @@
 
 ##  rt/remove_trash.sh 
 
-##  1. It is designed to replace old command rm without deleting it.
+##  1. It is designed to replace old command rm without having to delete it.
 ##  2. It can avoid deleting files or directories with old command rm by mistake.
 ##  3. You can continue to use new 'rm' to delete files or directories, and it will move the target file or directory to
 ##     a trash directory instead of directly deleting them.

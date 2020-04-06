@@ -15,7 +15,7 @@
 ##******First step******
 ## git clone https://github.com/Velcon-Zheng/rm-rt.git
 ## cp rm-rt/rt  ~/
-## echo 'alias rm="your-directory/rt"' >> ~/.bashrc ; source ~/.bashrc;
+## echo 'alias "rm= ~/rt"' >> ~/.bashrc ; source ~/.bashrc;
 ##******Second step******
 ## crontab -e
 ## 0 0 * * 0 rm -rf ~/zwg.trash/*

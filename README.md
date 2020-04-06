@@ -4,7 +4,7 @@
 ---
 
 ## 1. Introduction
-####  &emsp;1.1 It is designed to replace old command [rm](http://man7.org/linux/man-pages/man1/rm.1.html) without deleting it.
+####  &emsp;1.1 It is designed to replace old command [rm](http://man7.org/linux/man-pages/man1/rm.1.html) without having to delete it.
 ####  &emsp;1.2 It can avoid deleting files or directories with old command rm by mistake.
 ####  &emsp;1.3 You can continue to use new 'rm' to delete files or directories, and it will move the target file or directory to 
 ####  &emsp;&emsp;a trash directory instead of directly deleting them. 

@@ -1,6 +1,7 @@
 ---
 # rm-rt
 #### A tool to avoid deleting files or directories with command rm by mistake.
+#### Set a self-cleaning recycling station in linux system or others
 ---
 
 ## 1. Introduction

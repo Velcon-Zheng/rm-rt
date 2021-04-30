@@ -14,7 +14,7 @@
 ## 2. Installation
 #### &emsp;2.1 git clone https://github.com/Velcon-Zheng/rm-rt.git
 #### &emsp;2.2 cp  rm-rt/rt to your directory;
-#### &emsp;2.3 vim rt, set your trash directory and your global path of rt;
+#### &emsp;2.3 vim rt, set your trash directory and your global path of rt, the default is ~/zwg.trash;
 #### &emsp;2.4 echo 'alias rm="your-directory/rt"'  >>  ~/.bashrc ; source  ~/.bashrc;
 #### &emsp;2.5 [crontab](https://www.rosehosting.com/blog/linux-crontab/) -e , write '0 0 * * 0 rm -rf /your-trash-directory/*';
 ####  &emsp;&emsp;[This is optional and you can set the time to automatically empty your-trash-directory.](https://www.rosehosting.com/blog/linux-crontab/)

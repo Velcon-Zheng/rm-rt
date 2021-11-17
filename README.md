@@ -43,7 +43,7 @@ Finished: have moved the target file or directory to '$trash directory'
 ```
 #
 ## 4. Thanks
-#### &emsp;Thanks to Prof. Fan, Prof. Liu， and others for their teaching knowledge of programming.
+#### &emsp;Thanks to Prof. Fan, Prof. Liu and others for their teaching knowledge of programming.
 #### &emsp;Thanks to the network for providing many learning resources.
 #
 ## 5. Getting Help

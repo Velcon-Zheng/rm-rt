@@ -28,7 +28,7 @@
   Your Software bin folder is ***
   
   Good jobs! 
-  Installation of rt is finished!
+  Installation of rm-rt is finished!
 ```
 #### &emsp;   You also can manually install rm-rt by 2.3-2.6;
 #### &emsp;2.3 cp  rm-rt/rt to your directory;

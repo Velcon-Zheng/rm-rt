@@ -24,8 +24,8 @@
 ```
 #### &emsp;    Next, the installation is running:
 ```sh
-  Your trash folder is
-  Your Software bin folder is
+  Your trash folder is ***
+  Your Software bin folder is ***
   
   Good jobs! 
   Installation of rt is finished!

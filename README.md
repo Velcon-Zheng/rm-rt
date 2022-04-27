@@ -30,7 +30,7 @@
   Good jobs! 
   Installation of rt is finished!
 ```
-#### &emsp;   Or, you also can install rm-rt by 2.3-2.6;
+#### &emsp;   You also can manually install rm-rt by 2.3-2.6;
 #### &emsp;2.3 cp  rm-rt/rt to your directory;
 #### &emsp;2.4 vim rt, set your trash directory and your global path of rt, the default is ~/zwg.trash;
 #### &emsp;2.5 echo 'alias rm="your-directory/rt"'  >>  ~/.bashrc ; source  ~/.bashrc;

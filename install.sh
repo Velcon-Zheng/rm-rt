@@ -21,5 +21,5 @@ echo "0 0 * * 0 rm -rf $TrashFolder/* " >> /tmp/crontab.$$
 crontab /tmp/crontab.$$
 source ~/.bashrc 
 
-echo -e "\n\nGood jobs! \nInstallation of rt is finished! \n"
+echo -e "\n\nGood jobs! \nInstallation of rm-rt is finished! \n"
 

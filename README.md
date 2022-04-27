@@ -19,8 +19,8 @@
 ```
 #### &emsp;    Then, you can set the trash folder and Software bin folder:
 ```sh
-  Enter Your trash folder:
-  Enter Your Software bin folder:
+  Enter Your trash folder: ***
+  Enter Your Software bin folder: ***
 ```
 #### &emsp;    Next, the installation is running:
 ```sh

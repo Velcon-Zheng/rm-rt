@@ -13,10 +13,28 @@
 #
 ## 2. Installation
 #### &emsp;2.1 git clone https://github.com/Velcon-Zheng/rm-rt.git
-#### &emsp;2.2 cp  rm-rt/rt to your directory;
-#### &emsp;2.3 vim rt, set your trash directory and your global path of rt, the default is ~/zwg.trash;
-#### &emsp;2.4 echo 'alias rm="your-directory/rt"'  >>  ~/.bashrc ; source  ~/.bashrc;
-#### &emsp;2.5 [crontab](https://www.rosehosting.com/blog/linux-crontab/) -e , write '0 0 * * 0 rm -rf /your-trash-directory/*';
+#### &emsp;2.2 you can simply run sh install.sh to install rt:
+```sh
+  sh install.sh
+```
+#### &emsp;    Then, you can set the trash folder and Software bin folder:
+```sh
+  Enter Your trash folder:
+  Enter Your Software bin folder:
+```
+#### &emsp;    Next, the installation is running:
+```sh
+  Your trash folder is
+  Your Software bin folder is
+  
+  Good jobs! 
+  Installation of rt is finished!
+```
+#### &emsp;   Or, you also can install rm-rt by 2.3-2.6;
+#### &emsp;2.3 cp  rm-rt/rt to your directory;
+#### &emsp;2.4 vim rt, set your trash directory and your global path of rt, the default is ~/zwg.trash;
+#### &emsp;2.5 echo 'alias rm="your-directory/rt"'  >>  ~/.bashrc ; source  ~/.bashrc;
+#### &emsp;2.6 [crontab](https://www.rosehosting.com/blog/linux-crontab/) -e , write '0 0 * * 0 rm -rf /your-trash-directory/*';
 ####  &emsp;&emsp;[This is optional and you can set the time to automatically empty your-trash-directory.](https://www.rosehosting.com/blog/linux-crontab/)
 #
 ## 3. Usage 

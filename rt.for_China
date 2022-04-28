@@ -22,7 +22,7 @@
 #########################
 
 alias rm="~/rt" ## Replace rm command with rt command, the "~/rt" should be set to your global path. It should be written in ~/.bashrc
-Trashdir="~/zwg.trash" ## Set to your trash directory, and suggest not set to your home ~/
+Trashdir=~/zwg.trash ## Set to your trash directory, and suggest not set to your home ~/
 
 ## Check the order is correct
 if [ ! -d $Trashdir ]; then
@@ -35,6 +35,7 @@ if [ $# -lt 1 ]; then
     exit  
 fi
 AA="del"
+AA2="res"
 BB=`basename $1`
 CC=1
 DD=1
@@ -55,6 +56,9 @@ for i in $*; do
             then
 	        unalias rm
             fi
+	elif [ "$AA2" == "$BB" ]
+        then
+            echo -e "正在恢复文件或文件夹 ...... \n"
         else
 	    TrashFileName=`basename $i`
 	    mv $i  $Trashdir/$TrashFileName-$Time	
@@ -63,6 +67,9 @@ for i in $*; do
         if [ $DD -ge 2 ] &&  ( [ "$onoff" == "Y" ] || ( echo $onoff | grep -qi "Yes" )  )
         then
             rm -rif $i
+	elif [ "$AA2" == "$BB" ]
+	then
+            mv  $Trashdir/*$i*  ./
         else
 	    TrashFileName=`basename $i`
 	    mv $i  $Trashdir/$TrashFileName-$Time	
@@ -72,9 +79,12 @@ for i in $*; do
 done
 if [ $DD -ge 2 ] &&  ( [ "$onoff" == "Y" ] || ( echo $onoff | grep -qi "Yes" )  )
 then
-    alias rm="~/rt"
     echo -e "警告: 已经直接将文件或文件夹删除 \n"
     #echo -e "Warning: have permanently deleted the target file or directory \n"
+elif [ "$AA2" == "$BB" ]
+then
+    echo -e "完成: 已经恢复文件或文件夹 \n"
+    #echo -e "Finished: have resscue the target file or directory from $Trashdir \n"
 else
     echo -e "完成: 将文件或文件夹移至垃圾回收站 $Trashdir \n"
     #echo -e "Finished: have moved the target file or directory to $Trashdir \n"

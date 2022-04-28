@@ -48,7 +48,7 @@ Finished: have moved the target file or directory to '$trash directory'
 #### &emsp;3.2 You can restore target file or directory when you continue to need.
 ```sh
 rm res  test.file  test.directory
-Finished: have resscue the target file or directory from '$trash directory'
+Finished: have rescue the target file or directory from '$trash directory'
 ```
 #####
 #####  &emsp;3.3 Permanently delete files or directories

@@ -35,7 +35,7 @@ if [ $# -lt 1 ]; then
     exit  
 fi
 AA="del"
-AA2="res"
+AA2="rec"
 BB=`basename $1`
 CC=1
 DD=1

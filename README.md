@@ -47,7 +47,6 @@ Finished: have moved the target file or directory to '$trash directory'
 #####
 #### &emsp;3.2 You can restore target file or directory when you continue to need.
 ```sh
-touch test.file ; mkdir test.directory
 rm res  test.file  test.directory
 Finished: have resscue the target file or directory from '$trash directory'
 ```

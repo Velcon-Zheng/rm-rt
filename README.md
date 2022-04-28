@@ -38,17 +38,17 @@
 ####  &emsp;&emsp;[This is optional and you can set the time to automatically empty your-trash-directory.](https://www.rosehosting.com/blog/linux-crontab/)
 #
 ## 3. Usage 
-#### &emsp;3.1 Delete files or directories, and you can restore them if you continue to need.
+#### &emsp;3.1 Delete files or directories, and you can recover them if you continue to need.
 ```sh
 touch test.file ; mkdir test.directory
 rm    test.file  test.directory
 Finished: have moved the target file or directory to '$trash directory'
 ```
 #####
-#### &emsp;3.2 You can restore target file or directory when you continue to need.
+#### &emsp;3.2 You can recover target file or directory when you continue to need.
 ```sh
-rm res  test.file  test.directory
-Finished: have rescue the target file or directory from '$trash directory'
+rm rec  test.file  test.directory
+Finished: have recover the target file or directory from '$trash directory'
 ```
 #####
 #####  &emsp;3.3 Permanently delete files or directories

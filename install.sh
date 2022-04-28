@@ -10,7 +10,7 @@ sed -i "24d"  rt
 sed -i "23a alias rm=\"$BinFolder/rt\""  rt
 echo "alias rm=\"$BinFolder/rt\""  >> ~/.bashrc
 sed -i "25d"  rt
-sed -i "24a Trashdir=\"$TrashFolder\""  rt 
+sed -i "24a Trashdir=$TrashFolder"  rt 
 
 #step2
 cp rt $BinFolder

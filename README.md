@@ -38,10 +38,11 @@
 ####  &emsp;&emsp;[This is optional and you can set the time to automatically empty your-trash-directory.](https://www.rosehosting.com/blog/linux-crontab/)
 #
 ## 3. Usage 
+#### &emsp;You can use the 'rm' or 'rt' command to do the following.
 #### &emsp;3.1 Delete files or directories, and you can recover them if you continue to need.
 ```sh
 touch test.file ; mkdir test.directory
-rm    test.file  test.directory
+rm    test.file  test.directory 
 Finished: have moved the target file or directory to '$trash directory'
 ```
 #####

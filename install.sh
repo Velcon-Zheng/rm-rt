@@ -14,6 +14,7 @@ sed -i "24a Trashdir=$TrashFolder"  rt
 
 #step2
 cp rt $BinFolder
+chmod 755 $BinFolder/rt 
 
 #step3
 crontab -l > /tmp/crontab.$$

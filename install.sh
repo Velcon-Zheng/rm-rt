@@ -6,6 +6,7 @@ echo -e "\nYour trash folder is $TrashFolder!"
 echo "Your Software bin folder is $BinFolder!"
 
 #Step1
+mkdir -p $BinFolder
 sed -i "24d"  rt
 sed -i "23a alias rm=\"$BinFolder/rt\""  rt
 echo "alias rm=\"$BinFolder/rt\""  >> ~/.bashrc

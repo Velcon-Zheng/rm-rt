@@ -15,7 +15,7 @@
 #### &emsp;2.1 git clone https://github.com/Velcon-Zheng/rm-rt.git
 #### &emsp;2.2 you can simply run sh install.sh to install rt:
 ```sh
-  sh install.sh
+  sh install.sh   or  sh  install.for_China.sh
 ```
 #### &emsp;    Then, you can set the trash folder and Software bin folder:
 ```sh
